@@ -6,15 +6,47 @@
     
 }
 body{
+background-color: aqua;
+}
+header{
     background-color: cyan;
 }
 
-h1{color:blue;}
+h1{color:black;}
+.formu{
+    display: flex;
+}
+h1{
+    font-size: 2rem;
+}
+p{
+    font-size: 1rem;
+}
 .nav{
     margin-top: 10px;
     list-style-type: none;
     padding-left: 0;
+    position: fixed;
+    
+   
  }  
+ .nav-mov{ position: fixed;
+    bottom: 1px;
+    list-style-type: none;
+    margin-top: 10px;
+    
+ }
+ .nav-mov a{
+    color: white;
+    background-color: gray;
+    padding:5px;
+    border-radius:20px;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+.nav-mov li{
+    display: inline-block;
+}
  .nav li{
     display: inline-block;
 }
@@ -22,6 +54,7 @@ h1{color:blue;}
     color: white;
     background-color: gray;
     padding:5px;
-    border-radius:2px;
+    border-radius:20px;
     text-decoration: none;
+    font-size: 1.5rem;
 }
