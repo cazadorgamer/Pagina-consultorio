@@ -21,11 +21,11 @@
         <option value="">Neurologo</option>
   </select>
     <div class="mb-3">
-        <label for="exampleFormControlInput1" class="form-label">Nombre Paciente</label>
+        <label for="exampleFormControlInput1" class="form-label"id="Nombrepaciente">Nombre Paciente</label>
         <input  type="text"  class="form-control" id="exampleFormControlInput1" placeholder="Nombre">
       </div>
       <div class="mb-3">
-        <label for="exampleFormControlInput1" class="form-label">DNI</label>
+        <label for="exampleFormControlInput1" class="form-label"id="DniPaciente">DNI</label>
         <input type="number" class="form-control" id="exampleFormControlInput2" placeholder="Dni">
       </div>
       <div class="mb-3">
@@ -37,23 +37,44 @@
         <input type="text" class="form-control" id="exampleFormControlInput4" placeholder="Direccion Paciente">
       </div>
       <div class="mb-3">
-        <label for="exampleFormControlTextarea1" class="form-label">Historia clinica</label>
+        <label for="exampleFormControlTextarea1" class="form-label" id="historiaClinita">Historia clinica</label>
         <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
       </div>
 
-
+<button id="agregarVisita">Agregar Visita</button>
+<ul id="todo_list">
+  
+</ul>
     
-<nav>
+<script>
+  var parafo=document.getElementsByTagName("p")
+ 
+  var pacientes=[
+    "Juan",
+    "Pedro",
+    "Lucas",
+  ];
+  var todoList=document.querySelector("#todo_list");
+   for(var i=0; i< pacientes.length;i+=1){
+                var pacientes=pacientes[i];
+                var li=document.createElement("li");
+                li.textContent=pacientes;
+                li.id="elemento_"+i;
+                todoList.appendChild(li);
+            };
+            var agregarBoton=document.getElementById("agregarVisita");
+             agregarBoton.addEventListener("click",function(){
+
+            });
+</script>
 </div>
 <div>
-    <ul class="nav-mov">
-        <li><a href="index.html">Pagina Principal</a></li>
-    </ul>
+  
 </nav>
 </div>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-<script src="HistClin.js"></script>
+
 </body>
 
 </html>
