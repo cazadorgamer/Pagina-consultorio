@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header><h1>Editar historia clinica</h1>
+    <header><p>Editar historia clinica</p>
    </header>
 <div class="container">
     <select class="form-select" aria-label="Default select example">
@@ -21,8 +21,8 @@
         <option value="">Neurologo</option>
   </select>
     <div class="mb-3">
-        <label for="exampleFormControlInput1" class="form-label"id="Nombrepaciente">Nombre Paciente</label>
-        <input  type="text"  class="form-control" id="exampleFormControlInput1" placeholder="Nombre">
+        <label for="exampleFormControlInput1" class="form-label">Nombre Paciente</label>
+        <input  type="text"  id="Nombrepaciente" class="form-control" id="exampleFormControlInput1" placeholder="Nombre">
       </div>
       <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label"id="DniPaciente">DNI</label>
@@ -55,16 +55,26 @@
     "Lucas",
   ];
   var todoList=document.querySelector("#todo_list");
+
+function agregarTarea(tarea,id) {
+  var li=document.createElement("li");
+  
+   li.textContent=tarea;
+if(id){
+  li.id=id;
+}  
+
+  todoList.appendChild(li);
+}
+
    for(var i=0; i< pacientes.length;i+=1){
-                var pacientes=pacientes[i];
-                var li=document.createElement("li");
-                li.textContent=pacientes;
-                li.id="elemento_"+i;
-                todoList.appendChild(li);
+                var paciente=pacientes[i];
+                agregarTarea(paciente,"elemento_"+i)
             };
             var agregarBoton=document.getElementById("agregarVisita");
              agregarBoton.addEventListener("click",function(){
-
+var todoValue=document.getElementById("Nombrepaciente").value;
+agregarTarea(todoValue);
             });
 </script>
 </div>
