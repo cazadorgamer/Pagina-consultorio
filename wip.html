@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Hospital Demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background: #f4f6f7;
+      color: #333;
+    }
+
+    /* HEADER */
+    header {
+      background: #ffffff;
+      border-bottom: 1px solid #ddd;
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      color: #008c45;
+      font-size: 22px;
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #444;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #008c45;
+    }
+
+    /* HERO */
+    .hero {
+      background: url("https://images.unsplash.com/photo-1586773860418-d37222d8fce3") center/cover no-repeat;
+      height: 350px;
+      display: flex;
+      align-items: center;
+      padding: 40px;
+      color: white;
+    }
+
+    .hero-box {
+      background: rgba(0,0,0,0.55);
+      padding: 25px;
+      max-width: 500px;
+      border-radius: 6px;
+    }
+
+    .hero-box h2 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    /* BUSCADOR */
+    .search {
+      background: white;
+      padding: 30px;
+      text-align: center;
+    }
+
+    .search input {
+      width: 60%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    /* BOTONES */
+    .actions {
+      margin-top: 20px;
+    }
+
+    .actions button {
+      background: #008c45;
+      color: white;
+      border: none;
+      padding: 12px 18px;
+      margin: 5px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .actions button:hover {
+      background: #006f36;
+    }
+
+    /* SECCIONES */
+    section {
+      padding: 40px;
+    }
+
+    section h3 {
+      margin-bottom: 20px;
+      color: #008c45;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+
+    .card div {
+      padding: 15px;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #008c45;
+      color: white;
+      padding: 25px;
+      text-align: center;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Hospital Demo</h1>
+  <nav>
+    <a href="#">Pacientes</a>
+    <a href="#">Especialidades</a>
+    <a href="#">Profesionales</a>
+    <a href="#">Contacto</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="hero-box">
+    <h2>Medicina centrada en vos</h2>
+    <p>Atención médica integral, humana y de calidad.</p>
+  </div>
+</div>
+
+<div class="search">
+  <h3>Buscar por especialidad</h3>
+  <input type="text" placeholder="Ej: Cardiología">
+  <div class="actions">
+    <button>Turnos</button>
+    <button>Guardia</button>
+    <button>Cartilla médica</button>
+    <button>Resultados</button>
+  </div>
+</div>
+
+<section>
+  <h3>Red de atención</h3>
+  <div class="cards">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1576765607924-b5f89c1b0b2a">
+      <div>
+        <h4>Sedes</h4>
+        <p>Atención en múltiples ubicaciones.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1587351021759-3e566b6af7cc">
+      <div>
+        <h4>Centros Médicos</h4>
+        <p>Servicios especializados.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1580281657521-0d47c61c50b5">
+      <div>
+        <h4>Farmacia</h4>
+        <p>Vacunatorio y más.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Hospital Demo – Sitio de ejemplo</p>
+</footer>
+
+</body>
+</html>
